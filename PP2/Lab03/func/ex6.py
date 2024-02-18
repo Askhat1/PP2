@@ -1,5 +1,6 @@
 def reversed(string):
     string.reverse()
+    
     print(*string)
 
 

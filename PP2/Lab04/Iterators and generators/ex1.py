@@ -1,6 +1,5 @@
 def squares(N):
-    a=(i**2 for i in range(1,N+1))
-    for i in a:
-        print(i)
+    for i in range(1,N): 
+        yield i**2
 N=int(input())
-squares(N)
+print(*squares(N))

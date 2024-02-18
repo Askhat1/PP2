@@ -1,5 +1,5 @@
 def uniq(x):
-    only_uniq = [1]
+    only_uniq = []
     for i in x:
         if i not in only_uniq:
             only_uniq.append(i)

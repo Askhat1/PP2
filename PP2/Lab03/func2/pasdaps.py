@@ -82,9 +82,8 @@ def avg_cat(cat,movies):
     summary_cat=0
     for i in movies:
         if i["category"]==cat:
-            summary+=i["imdb"]
             summary_cat+=1
-
+            summary+=i["imdb"]
     avg_cat=summary/summary_cat
     print(avg_cat)
 category="Thriller"
