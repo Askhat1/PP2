@@ -1,5 +1,5 @@
 import re
-txt="python_Aegex_Aweqweqwe"
+txt="pythonAegexAweqweqwe"
 a = re.findall('[A-Z][^A-Z]*', txt)
 x=a
 print(x)

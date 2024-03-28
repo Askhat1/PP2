@@ -1,4 +1,4 @@
 import re
-txt = "The rain in Spain abbb"
-x = re.findall(r'a(b{2,3})', txt)
+txt = "The rain in Spain abbbb"
+x = re.findall(r'ab{2,3}', txt)
 print(x)

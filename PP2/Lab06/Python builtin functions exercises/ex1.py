@@ -13,8 +13,9 @@ def calculate_letters(s):
     upper=sum(1 for char in s if char.isupper())
     lower=sum(1 for char in s if char.islower())
     return upper, lower
-print(calculate_letters("HellO"))
-#3
+upper,lower=calculate_letters("HellO")
+print(f"Upper: {upper}, lower:{lower}")
+#3  
 def is_palindrome(str):
     reverse="".join(reversed(str))
     if reverse==str:
