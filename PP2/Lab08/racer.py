@@ -56,19 +56,38 @@ class Enemy(pygame.sprite.Sprite):
 class Player(pygame.sprite.Sprite):
     def __init__(self):
         super().__init__() 
-        self.image = pygame.image.load("image\Player.png")
+        self.image_forward = pygame.image.load("image\Player.png")
+        self.image_right = pygame.image.load("image\Player.png")
+        self.image_right=pygame.transform.rotate(self.image_right, -7)
+        self.image_left = pygame.image.load("image\Player.png")
+        self.image_left=pygame.transform.rotate(self.image_left, 7)
+        self.image = self.image_forward
+
         self.rect = self.image.get_rect()
         self.rect.center = (160, 520)
        
     def move(self):
         pressed_keys = pygame.key.get_pressed()
-        
+        if self.rect.top > 0:
+            if pressed_keys[K_UP]:
+                self.rect.move_ip(0, -5)
+        if self.rect.top > 0:
+            if pressed_keys[K_DOWN]:
+                self.rect.move_ip(0, 5)
         if self.rect.left > 0:
               if pressed_keys[K_LEFT]:
                   self.rect.move_ip(-5, 0)
+                  self.image = self.image_left
+                  
         if self.rect.right < SCREEN_WIDTH:        
               if pressed_keys[K_RIGHT]:
                   self.rect.move_ip(5, 0)
+                  self.image=self.image_right
+        
+        if not pressed_keys[K_LEFT] and not pressed_keys[K_RIGHT]:
+            self.image=self.image_forward
+
+
     def collect_coin(self, coins):
         collisions = pygame.sprite.spritecollide(self, coins, True)
         for coin in collisions:

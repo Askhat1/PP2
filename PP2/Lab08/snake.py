@@ -6,8 +6,8 @@ pygame.init()
 
 # Set up constants for screen dimensions and colors
 snake_speed = 10
-SCREEN_W = 500
-SCREEN_H = 400
+SCREEN_W = 600
+SCREEN_H = 600
 black = (0, 0, 0)
 white = (255, 255, 255)
 red = (255, 0, 0)
