@@ -154,12 +154,12 @@ while True:
 
     # Check for coin collection
     if P1.collect_coin(coins):
-        COIN_SCORE += 1
+        COIN_SCORE += random.randint(1,5)
         pygame.mixer.Sound('audio\zvuk-vyibivaniya-monetyi-iz-igryi-super-mario-30119.wav').play()
-
         new_coin = Coin()
         coins.add(new_coin)
         all_sprites.add(new_coin)
+        SPEED += 0.5 #speed increasing 
 
         
 

@@ -28,7 +28,7 @@ while not finish:
             finish = True
         elif event.type == pygame.KEYDOWN:
             if event.key == pygame.K_RIGHT:
-                if background_index == 3:
+                if background_index == len(backgrounds)-1:
                     background_index = 0
                 else:
                     background_index = background_index + 1

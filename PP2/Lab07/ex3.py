@@ -2,8 +2,8 @@ import pygame
 import sys
 
 pygame.init()
-screen_width = 1280
-screen_height = 960
+screen_width = 800
+screen_height = 600
 screen = pygame.display.set_mode((screen_width, screen_height))
 pygame.display.set_caption("Ball")
 WHITE = (255, 255, 255)
